@@ -11,6 +11,11 @@ Vagrant.configure("2") do |config|
     controller.vm.box = "ubuntu/trusty64"
     controller.vm.hostname = "controller"
     controller.vm.network "private_network", ip: "192.168.81.10"
+    #controller.vm.provision :ansible do |ansible|
+        #Disable default limit to connect to all the machines
+    #   ansible.limit = "all"
+    #   ansible.playbook = "controller.yml"
+     #end
   end
 
   config.vm.define "web" do |web|
