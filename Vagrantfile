@@ -23,7 +23,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "db" do |db|
     db.vm.box = "nrel/CentOS-6.5-x86_64"
     db.vm.hostname = "db"
-    db.vm.network private_network", ip: "192.168.81.30"
+    db.vm.network "private_network", ip: "192.168.81.30"
   end
 
 end
